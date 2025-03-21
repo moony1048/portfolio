@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
             start: "top 0%",
             end: "bottom+=300% 0%",
             scrub: 1,
-            markers: true,
+            // markers: true,
             pin: true,
             onEnter: () => {
                 gsap.to(secTitle, {

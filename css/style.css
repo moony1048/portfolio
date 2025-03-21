@@ -245,7 +245,7 @@ section {
 
 .skills-small img {
     width: 3.6rem;
-    height: 3.6rem;
+    /* height: 3.6rem; */
 }
 
 /* project-face */
@@ -513,11 +513,10 @@ section {
 }
 
 .contact p strong {
-    /* color: #f1cfff; */
     /* color: #fdf4df; */
-    /* color: #FA824C */
+    /* color: #f4bfdb; */
 
-    color: #f4bfdb;
+    color: #78e96c;
 }
 
 .contact-wrap {
@@ -552,12 +551,12 @@ section {
     position: fixed;
     right: 4rem;
     bottom: 4rem;
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     border-radius: 50%;
     background: var(--sub-color);
     color: var(--text-color2);
-    font-size: 3.2rem;
+    font-size: 2.4rem;
 
     z-index: 999;
 

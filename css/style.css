@@ -97,11 +97,11 @@ header {
 
 /* .gnb li:nth-child(1) a {
     border-bottom: 3px solid var(--sub-color);
-}
-.gnb li:nth-child(2) a {
+} */
+/* .gnb li:nth-child(2) a {
     border-bottom: 3px solid var(--sub-color);
-}
-.gnb li:nth-child(3) a {
+} */
+/* .gnb li:nth-child(3) a {
     border-bottom: 3px solid var(--sub-color);
 } */
 
@@ -228,7 +228,7 @@ section {
 }
 
 .skills-big img {
-    width: 8.2rem;
+    /* width: 8.2rem; */
     height: 8.2rem;
 }
 
@@ -315,7 +315,7 @@ section {
 .steps,
 .rotate-slider {
     z-index: 999;
-    /* card-content-p의 기준점?(마이크로사이트,리디자인,app)  */
+
     /* position: relative; */
 }
 
@@ -515,7 +515,9 @@ section {
 .contact p strong {
     /* color: #f4acb7; */
     /* color: #f1cfff; */
-    color: #fdf4df;
+    /* color: #fdf4df; */
+    /* color: #fface4; */
+    color: #f4bfdb;
 
     font-family: "Cafe24Ssurround";
 }
@@ -580,8 +582,8 @@ section {
     align-items: center;
 } */
 
-/* 해야할 것들 */
-/* 마이크로사이트 <-> 리디자인 순서 */
-/* 시작 애니메이션 부분 */
-/* header 부분 해당 영역마다 줄 있는 거 */
-/* 각각 링크연결 */
+/* 해야하는 것들 */
+/* 피자헛 깃허브 올리고 링크 추가 */
+/* 인트로 애니메이션 고민 */
+/* gnb 누르면 줄 (유지) 있는 거 */
+/* footer 상업적 이용~ */

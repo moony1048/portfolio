@@ -513,13 +513,11 @@ section {
 }
 
 .contact p strong {
-    /* color: #f4acb7; */
     /* color: #f1cfff; */
     /* color: #fdf4df; */
-    /* color: #fface4; */
-    color: #f4bfdb;
+    /* color: #FA824C */
 
-    font-family: "Cafe24Ssurround";
+    color: #f4bfdb;
 }
 
 .contact-wrap {
@@ -527,9 +525,9 @@ section {
 }
 
 .contact-text {
-    margin-top: 10rem;
+    margin-top: 8rem;
 
-    margin-left: 70rem;
+    margin-left: 69rem;
 }
 
 .contact-text dl {
@@ -572,18 +570,17 @@ section {
     font-family: "Cafe24Ssurround";
 }
 
-/* footer {
-    height: 70px;
-    background: #222;
-    color: #fff;
+footer {
+    height: 7rem;
+    background: var(--text-color);
+    color: var(--text-color2);
 
     display: flex;
     justify-content: center;
     align-items: center;
-} */
+}
 
-/* 해야하는 것들 */
-/* 피자헛 깃허브 올리고 링크 추가 */
-/* 인트로 애니메이션 고민 */
-/* gnb 누르면 줄 (유지) 있는 거 */
-/* footer 상업적 이용~ */
+footer p {
+    font-size: 1.5rem;
+    font-family: "Cafe24SsurroundAir";
+}

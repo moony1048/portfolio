@@ -2,12 +2,12 @@ import PhotoSwipeLightbox from "https://unpkg.com/photoswipe/dist/photoswipe-lig
 
 // 갤러리 초기화 함수
 function initializeGallery(galleryId) {
-    const lightbox = new PhotoSwipeLightbox({
-        gallery: galleryId,
-        children: "a",
-        pswpModule: () => import("https://unpkg.com/photoswipe"),
-    });
-    lightbox.init();
+        const lightbox = new PhotoSwipeLightbox({
+                gallery: galleryId,
+                children: "a",
+                pswpModule: () => import("https://unpkg.com/photoswipe"),
+        });
+        lightbox.init();
 }
 
 // 첫 번째 갤러리 초기화

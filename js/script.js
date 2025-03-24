@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // TOP 버튼
+    // 수정
     document.querySelector(".btn-top").addEventListener("click", () => {
         gsap.to(window, {
             duration: 1,
@@ -47,6 +49,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 offsetY: 0,
             },
         });
+    });
+    const btnTop = document.querySelector(".btn-top");
+    gsap.from(btnTop, {
+        autoAlpha: 0,
+        scrollTrigger: {
+            trigger: ".contact",
+            // markers: true,
+            start: "top 70%",
+            toggleActions: "play none play reverse",
+        },
     });
 
     const secTitle = document.querySelector(".sec-title");

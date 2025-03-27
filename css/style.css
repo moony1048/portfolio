@@ -42,11 +42,6 @@ a:hover {
     color: var(--sub-color);
 }
 
-.gnb li:hover a {
-    color: var(--sub-color);
-    border-bottom: 3px solid var(--sub-color);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -95,15 +90,28 @@ header {
     /* border: 1px solid #000; */
 }
 
-/* .gnb li:nth-child(1) a {
-    border-bottom: 3px solid var(--sub-color);
-} */
-/* .gnb li:nth-child(2) a {
-    border-bottom: 3px solid var(--sub-color);
-} */
-/* .gnb li:nth-child(3) a {
-    border-bottom: 3px solid var(--sub-color);
-} */
+/*  */
+.gnb li.active a {
+    position: relative;
+    color: var(--sub-color);
+}
+
+.gnb li.active a::after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--sub-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/*  */
+.gnb li a:hover {
+    color: var(--sub-color);
+}
 
 section {
     width: 100%;
@@ -266,49 +274,32 @@ section {
 
 .face {
     display: flex;
+
+    width: 35%;
+    margin: 0 auto;
 }
 
-.eyes {
-    position: absolute;
-    display: flex;
-    bottom: 20%;
-    left: 35%;
+/* 눈 움직임 */
 
-    gap: 40rem;
+.eye {
+    animation: eye-ani 2s infinite both;
+    transform-origin: 50% 50%;
 }
 
-.eyes1 {
-    width: 6rem;
-    height: 12rem;
-    margin-right: 0;
-    border-radius: 50%;
-    background: var(--text-color2);
-}
+@keyframes eye-ani {
+    0% {
+        clip-path: inset(0% 0);
+    }
+    10% {
+        clip-path: inset(50% 0);
+    }
 
-.eyes2 {
-    width: 6rem;
-    height: 12rem;
-    margin-left: 0;
-    border-radius: 50%;
-    background: var(--text-color2);
-}
-
-.mouse {
-    position: absolute;
-    bottom: 12px;
-    left: 37%;
-}
-
-.pink1 {
-    position: absolute;
-    bottom: 40px;
-    left: 20%;
-}
-
-.pink2 {
-    position: absolute;
-    bottom: 40px;
-    right: 20%;
+    15% {
+        clip-path: inset(0% 0);
+    }
+    100% {
+        clip-path: inset(0% 0);
+    }
 }
 
 /* portfolio: porject */
@@ -354,6 +345,9 @@ section {
     will-change: transform;
 }
 
+.rotate-slider .cards {
+    transform: translate(-50%, -30%) rotate(3deg);
+}
 .card {
     position: absolute;
     top: 0%;
@@ -368,13 +362,18 @@ section {
     top: 0%;
     left: 50%;
     width: 250px;
-    min-height: 500px;
     margin-left: 0;
+
+    /* width: 400px; */
+    /* min-height: 500px; */
+    min-height: 400px;
 }
 
 #graphic-show .card-img {
     width: 25rem;
     height: 25rem;
+
+    /* margin: 0 auto; */
 }
 
 .card.active {
@@ -465,7 +464,7 @@ section {
     justify-content: center;
     gap: 10px;
 
-    margin-top: 30px;
+    margin-top: 20px;
 
     transform: translateY(30px);
     /* opacity: 0; */
@@ -473,10 +472,10 @@ section {
 }
 
 .btn a {
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 50px;
     font-weight: 700;
-    font-size: 2.4rem;
+    font-size: 2rem;
     text-decoration: none;
     color: var(--text-color2);
     background: var(--sub-color);
@@ -551,12 +550,14 @@ section {
     display: flex;
     margin-top: 2rem;
 
-    gap: 5rem;
+    gap: 3rem;
     color: var(--text-color2);
 }
 
 .contact-text dl dt {
     font-size: 3.3rem;
+    width: 11.5rem;
+    /* border: 1px solid #000; */
 }
 
 .contact-text dl dd {

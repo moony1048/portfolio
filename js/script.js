@@ -313,24 +313,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 추가 -> agency 예제 참고
     //공통 정의
-    const portText = gsap.utils.toArray(".text");
-    portText.forEach((text) => {
-        const text1 = new SplitType(text, { types: "chars" });
+    // const portText = gsap.utils.toArray(".text");
+    // portText.forEach((text) => {
+    //     const text1 = new SplitType(text, { types: "chars" });
 
-        gsap.from(text1.chars, {
-            y: -50,
-            autoAlpha: 0,
-            stagger: 0.1,
+    //     gsap.from(text1.chars, {
+    //         y: -50,
+    //         autoAlpha: 0,
+    //         stagger: 0.1,
 
-            // 스크롤과 연동
-            scrollTrigger: {
-                trigger: text,
-                // markers: true,
-                start: "top 50%", // trigger/viewport(scroller) -> viewport의 50% 지나면 나옴
-                end: "bottom 0%",
-            },
-        });
-    });
+    //         // 스크롤과 연동
+    //         scrollTrigger: {
+    //             trigger: text,
+    //             // markers: true,
+    //             start: "top 50%", // trigger/viewport(scroller) -> viewport의 50% 지나면 나옴
+    //             end: "bottom 0%",
+    //         },
+    //     });
+    // });
 
     // 원 크기를 조정 타임라인 설정
     // about으로 갈 때

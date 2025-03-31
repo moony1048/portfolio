@@ -98,22 +98,25 @@ header {
     position: relative;
 }
 
+/* 가운데로 수정 */
 .gnb li a i::after {
     content: "";
-    width: 4px;
-    height: 4px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: var(--sub-color);
     position: absolute;
-    top: 14%;
+    top: 40%;
     left: 100%;
     transform: translate(-50%);
 
     opacity: 0;
+
+    transition: 0.4s;
 }
 
 .gnb li a:hover i::after {
-    top: 14%;
+    top: 0;
     left: 100%;
     transform: translate(-50%);
 
@@ -161,8 +164,10 @@ section {
     position: relative;
     top: 400px;
     left: 0;
-    font-size: 6.4rem;
+    font-size: 7rem;
     text-align: center;
+
+    color: var(--sub-color);
 }
 
 .scroll-down {
@@ -194,6 +199,7 @@ section {
     z-index: 999;
 }
 
+/* 수정 */
 .about h2 {
     padding: 18rem 0;
 
@@ -202,12 +208,17 @@ section {
     font-size: 4rem;
     font-family: "Cafe24SsurroundAir";
     text-align: center;
+
+    margin-left: 5rem;
 }
 
 .about h2 strong {
     font-size: 6.4rem;
     font-family: "Cafe24SsurroundAir";
+    color: var(--main-color);
 }
+
+/* 수정 끝 */
 
 .about p {
     font-size: 6rem;
@@ -282,6 +293,9 @@ section {
 .graphic-text {
     position: relative;
     z-index: 999;
+
+    /* color: var(--main-color); */
+    color: var(--sub-color);
 }
 
 .face {
@@ -412,6 +426,7 @@ section {
     text-align: center;
 }
 
+/* 수정 */
 .card-content p {
     font-size: 3.2rem;
 
@@ -421,14 +436,19 @@ section {
     top: 0;
     left: 38%;
     /* transform: translate(-12%, -40%); */
+
+    color: var(--sub-color);
 }
 
 .card-title p {
     text-align: center;
     margin-bottom: 2.5rem;
     font-size: 3.2rem;
+
+    color: var(--sub-color);
 }
 
+/* 수정 끝 */
 .card-content dl {
     color: var(--text-color2);
 }
@@ -539,6 +559,8 @@ section {
     text-align: center;
 
     font-family: "Cafe24SsurroundAir";
+
+    animation: bounce-top 2.5s infinite 4s both;
 }
 
 .contact p strong {
@@ -613,4 +635,47 @@ footer {
 footer p {
     font-size: 1.5rem;
     font-family: "Cafe24SsurroundAir";
+}
+
+.bounce-top {
+    animation: bounce-top 0.9s both;
+}
+
+@keyframes bounce-top {
+    0% {
+        transform: translateY(-45px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    24% {
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(-24px);
+        animation-timing-function: ease-in;
+    }
+    65% {
+        transform: translateY(-12px);
+        animation-timing-function: ease-in;
+    }
+    82% {
+        transform: translateY(-6px);
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: translateY(-4px);
+        animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
 }

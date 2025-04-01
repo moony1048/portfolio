@@ -293,23 +293,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 색 채워지는
     // 공통정의
-    // const portText = gsap.utils.toArray(".text");
-    // portText.forEach((text) => {
-    //     const text1 = new SplitType(text, { types: "chars" });
+    const portText = gsap.utils.toArray(".text");
+    portText.forEach((text) => {
+        const text1 = new SplitType(text, { types: "chars" });
 
-    //     gsap.from(text1.chars, {
-    //         opacity: 0.2,
-    //         stagger: 0.2,
+        gsap.from(text1.chars, {
+            opacity: 0.2,
+            stagger: 0.2,
 
-    //         scrollTrigger: {
-    //             trigger: text,
-    //             // // markers: true,
-    //             start: "top 30%",
-    //             // end: "+=300%",
-    //             scrub: 1,
-    //         },
-    //     });
-    // });
+            scrollTrigger: {
+                trigger: text,
+                // // markers: true,
+                start: "top 30%",
+                // end: "+=300%",
+                scrub: 1,
+            },
+        });
+    });
 
     // 추가 -> agency 예제 참고
     //공통 정의

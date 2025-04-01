@@ -308,7 +308,7 @@ section {
 /* 눈 움직임 */
 
 .eye {
-    animation: eye-ani 2s infinite both;
+    animation: eye-ani 2s both;
     transform-origin: 50% 50%;
 }
 
@@ -560,7 +560,7 @@ section {
 
     font-family: "Cafe24SsurroundAir";
 
-    animation: bounce-top 2.5s infinite 4s both;
+    animation: bounce-top 2s both;
 }
 
 .contact p strong {

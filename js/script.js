@@ -403,3 +403,67 @@ document.addEventListener("DOMContentLoaded", () => {
         bottom: 0,
     });
 });
+
+// 토스트 메시지 표시
+function showToast(message) {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.classList.add("show");
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 3000);
+}
+
+// 연락처 복사 기능
+function copyToClipboard(id, buttonElement) {
+    const text = document.getElementById(id).textContent.trim();
+    const icon = buttonElement.querySelector("img");
+
+    navigator.clipboard
+        .writeText(text)
+        .then(() => {
+            showToast(`복사되었습니다: ${text}`);
+            if (icon) {
+                icon.src = "./img/solar_copy-bold.png"; // 성공 시 아이콘 변경
+                setTimeout(() => {
+                    icon.src = "./img/solar_copy-linear.png"; // 원래대로
+                }, 2000);
+            }
+        })
+        .catch((err) => {
+            showToast("복사에 실패했습니다😢");
+            console.error(err);
+        });
+}
+
+// // toast 메시지 표시
+// function showToast(message) {
+//     const toast = document.getElementById("toast");
+//     toast.textContent = message;
+//     toast.classList.add("show");
+//     setTimeout(() => {
+//         toast.classList.remove("show");
+//     }, 3000); // 2초 뒤 사라짐
+// }
+
+// // 연락처 복사 기능
+// function copyToClipboard(id) {
+//     const text = document.getElementById(id).textContent.trim();
+//     navigator.clipboard
+//         .writeText(text)
+//         .then(() => {
+//             showToast(`복사되었습니다: ${text}`);
+//         })
+//         .catch((err) => {
+//             showToast("복사에 실패했습니다😢");
+//             console.error(err);
+//         });
+// }
+
+// // 복사 버튼 이벤트 등록
+// document.getElementById("copy-phone").addEventListener("click", () => {
+//     copyToClipboard("phone");
+// });
+// document.getElementById("copy-email").addEventListener("click", () => {
+//     copyToClipboard("email");
+// });

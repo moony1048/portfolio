@@ -676,11 +676,33 @@
                         </dl>
                         <dl>
                             <dt>Phone</dt>
-                            <dd>010-5396-3807</dd>
+                            <dd>
+                                <span id="copy-phone">010-5396-3807</span>
+                                <button
+                                    onclick="copyToClipboard('copy-phone', this)"
+                                >
+                                    <img
+                                        src="./img/solar_copy-linear.png"
+                                        alt="복사 아이콘"
+                                        class="icon"
+                                    />
+                                </button>
+                            </dd>
                         </dl>
                         <dl>
                             <dt>E-mail</dt>
-                            <dd>moony1048@naver.com</dd>
+                            <dd>
+                                <span id="copy-email">moony1048@naver.com</span>
+                                <button
+                                    onclick="copyToClipboard('copy-email', this)"
+                                >
+                                    <img
+                                        src="./img/solar_copy-linear.png"
+                                        alt="복사 아이콘"
+                                        class="icon"
+                                    />
+                                </button>
+                            </dd>
                         </dl>
                     </div>
                 </div>
@@ -693,5 +715,6 @@
             </p>
         </footer>
         <button type="button" class="btn-top">TOP</button>
+        <div id="toast" class="toast">복사되었습니다!</div>
     </body>
 </html>

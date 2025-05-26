@@ -140,7 +140,7 @@ section {
     /* background-color: #ffd3ce; */
 }
 
-.line1 {
+/* .line1 {
     width: 2.5rem;
     height: 68.4rem;
     background: var(--main-color);
@@ -158,7 +158,7 @@ section {
     position: absolute;
     bottom: 0;
     right: 0;
-}
+} */
 
 .home-intro h1 {
     position: relative;
